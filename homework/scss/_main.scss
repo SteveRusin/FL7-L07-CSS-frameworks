@@ -1,0 +1,41 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.related {
+    @include img-border;
+    a {
+        text-decoration: none;
+    }
+    figure {
+        text-align: center;
+        figcaption {
+            padding: 10px 0;
+            width: 100%;
+            color: $white;
+        }
+    }
+    &>div {
+        padding-bottom: 20px;
+    }
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    .copy {
+        color: $footer-copy;
+        background-color: $footer;
+        padding: 10px 0 10px 25px;
+    }
+}

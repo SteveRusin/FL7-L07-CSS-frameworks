@@ -1,0 +1,32 @@
+//I don't know how to get rid of the code repeating below. It would be nice to use @extend class, but it's impossible because of the complex nesting. I found a way with !important use but it's inconceivable.
+.navbar-default {
+    .navbar-nav {
+        >.active {
+            a {
+                color: $nav-link;
+                background-color: $nav-link-active;
+                &:focus,
+                &:hover {
+                    color: $nav-link;
+                    background-color: $nav-link-active;
+                }
+            }
+        }
+        >li {
+            >a {
+                &:focus {
+                    color: $nav-link;
+                    background-color: $nav-link-active;
+                }
+                &:hover {
+                    color: $nav-link;
+                    background-color: $nav-link-active;
+                }
+            }
+        }
+    }
+}
+
+.page-header {
+    border-bottom: 2px solid lighten($title-underline-color, 30%);
+}

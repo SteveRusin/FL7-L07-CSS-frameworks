@@ -1,0 +1,27 @@
+@mixin border-mixin($bd-color, $border-ths: $border-ths) {
+    figure {
+        border: $border-ths solid $bd-color;
+        figcaption {
+            background-color: $bd-color;
+        }
+    }
+}
+
+@mixin img-border {
+    @for $i from 1 through 4 {
+        .related-img-#{$i} {
+            @if $i==1 {
+                @include border-mixin($first-img);
+            }
+            @else if $i==2 {
+                @include border-mixin($second-img);
+            }
+            @else if $i==3 {
+                @include border-mixin($third-img);
+            }
+            @else if $i==4 {
+                @include border-mixin($fourth-img);
+            }
+        }
+    }
+}
